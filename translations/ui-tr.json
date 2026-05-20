@@ -3,6 +3,7 @@
     "about": "Hakkımda",
     "experience": "Deneyim",
     "projects": "Projeler",
+    "github": "GitHub",
     "skills": "Teknolojiler",
     "education": "Eğitim",
     "certifications": "Sertifikalar",
@@ -39,6 +40,61 @@
       "problem": "Problem",
       "solution": "Çözüm",
       "result": "Sonuç"
+    },
+    "github": {
+      "subtitle": "GELİŞTİRİCİ AKTİVİTESİ",
+      "title": "GitHub'umdan canlı",
+      "support": "Geliştirdiğim, yayınladığım ve sürdürdüğüm her şeyin gerçek zamanlı görüntüsü — doğrudan GitHub API'sinden.",
+      "live": "Canlı",
+      "updated": "{time} güncellendi",
+      "stats": {
+        "repos": "Depo",
+        "reposSub": "herkese açık proje",
+        "contributions": "Katkı",
+        "contributionsSub": "son bir yılda",
+        "streak": "Güncel seri",
+        "streakSub": "ardışık gün",
+        "streakSubLongest": "en uzun seri: {n} gün",
+        "stars": "Kazanılan yıldız",
+        "starsSub": "tüm depolar genelinde",
+        "language": "Öne çıkan dil",
+        "languageSub": "depolarda en çok kullanılan",
+        "active": "Başlangıç",
+        "activeSub": "{n} yıldır GitHub'da"
+      },
+      "heatmap": {
+        "title": "Katkı grafiği",
+        "subtitle": "Son bir yılda {n} katkı",
+        "less": "Az",
+        "more": "Çok",
+        "tooltip": "{n} katkı",
+        "tooltipOne": "1 katkı",
+        "tooltipNone": "Katkı yok"
+      },
+      "feed": {
+        "title": "Son aktiviteler",
+        "empty": "Gösterilecek güncel herkese açık aktivite yok.",
+        "push": "{n} commit gönderildi:",
+        "pushOne": "Bir commit gönderildi:",
+        "createRepo": "Depo oluşturuldu:",
+        "createBranch": "Bir dal oluşturuldu:",
+        "pr": "Pull request açıldı:",
+        "star": "Yıldız verildi:",
+        "fork": "Fork'landı:",
+        "release": "Sürüm yayınlandı:",
+        "issue": "Issue açıldı:",
+        "public": "Açık kaynak yapıldı:"
+      },
+      "languages": {
+        "title": "Dil dağılımı",
+        "empty": "Henüz dil verisi yok."
+      },
+      "error": {
+        "title": "GitHub aktivitesi kullanılamıyor",
+        "body": "Canlı akışa şu anda ulaşılamadı. Lütfen birazdan tekrar deneyin.",
+        "retry": "Tekrar dene",
+        "profile": "GitHub profilini aç"
+      }
     },
     "techStack": {
       "label": "Teknolojiler",

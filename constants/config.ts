@@ -11,10 +11,14 @@ export const DEFAULT_LOCALE = 'en'
 
 export type Locale = (typeof LOCALES)[number]
 
+/** GitHub handle powering the Developer Activity dashboard. */
+export const GITHUB_USERNAME = 'emrepca'
+
 export const NAV_ITEMS = [
   { id: 'about', key: 'nav.about' },
   { id: 'experience', key: 'nav.experience' },
   { id: 'projects', key: 'nav.projects' },
+  { id: 'github', key: 'nav.github' },
   { id: 'tech-stack', key: 'nav.skills' },
   { id: 'education', key: 'nav.education' },
   { id: 'certificates', key: 'nav.certifications' },

@@ -9,6 +9,7 @@ import { Hero } from '@/components/sections/Hero'
 import { About } from '@/components/sections/About'
 import { Experience } from '@/components/sections/Experience'
 import { Projects } from '@/components/sections/Projects'
+import { GithubActivity } from '@/components/sections/GithubActivity'
 import { TechStack } from '@/components/sections/TechStack'
 import { Education } from '@/components/sections/Education'
 import { Certificates } from '@/components/sections/Certificates'
@@ -36,6 +37,7 @@ export default async function LocalizedPage({ params }: PageProps) {
         <About lang={lang} cv={cv} />
         <Experience lang={lang} cv={cv} />
         <Projects lang={lang} projects={projects} />
+        <GithubActivity lang={lang} />
         <TechStack lang={lang} cv={cv} />
         <Education lang={lang} cv={cv} />
         <Certificates lang={lang} certificates={certificates} />

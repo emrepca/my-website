@@ -3,6 +3,7 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
+    "github": "GitHub",
     "skills": "Tech Stack",
     "education": "Education",
     "certifications": "Certifications",
@@ -39,6 +40,61 @@
       "problem": "Problem",
       "solution": "Solution",
       "result": "Result"
+    },
+    "github": {
+      "subtitle": "Developer Activity",
+      "title": "Live from my GitHub",
+      "support": "A real-time snapshot of what I build, ship and maintain — pulled straight from the GitHub API.",
+      "live": "Live",
+      "updated": "Updated {time}",
+      "stats": {
+        "repos": "Repositories",
+        "reposSub": "public projects",
+        "contributions": "Contributions",
+        "contributionsSub": "in the past year",
+        "streak": "Current streak",
+        "streakSub": "consecutive days",
+        "streakSubLongest": "longest run: {n} days",
+        "stars": "Stars earned",
+        "starsSub": "across all repositories",
+        "language": "Top language",
+        "languageSub": "most used in repos",
+        "active": "Building since",
+        "activeSub": "{n} years on GitHub"
+      },
+      "heatmap": {
+        "title": "Contribution graph",
+        "subtitle": "{n} contributions in the last year",
+        "less": "Less",
+        "more": "More",
+        "tooltip": "{n} contributions",
+        "tooltipOne": "1 contribution",
+        "tooltipNone": "No contributions"
+      },
+      "feed": {
+        "title": "Recent activity",
+        "empty": "No recent public activity to show.",
+        "push": "Pushed {n} commits to",
+        "pushOne": "Pushed a commit to",
+        "createRepo": "Created repository",
+        "createBranch": "Created a branch in",
+        "pr": "Opened a pull request in",
+        "star": "Starred",
+        "fork": "Forked",
+        "release": "Published a release in",
+        "issue": "Opened an issue in",
+        "public": "Open-sourced"
+      },
+      "languages": {
+        "title": "Language breakdown",
+        "empty": "No language data available yet."
+      },
+      "error": {
+        "title": "GitHub activity is unavailable",
+        "body": "The live feed couldn't be reached right now. Please try again in a moment.",
+        "retry": "Try again",
+        "profile": "Open GitHub profile"
+      }
     },
     "techStack": {
       "label": "Tech Stack",
