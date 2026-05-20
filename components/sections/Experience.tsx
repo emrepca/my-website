@@ -230,7 +230,6 @@ function ExperienceCard({
     if (inView) onActivate()
   }, [inView, onActivate])
 
-  const isPresent = index === 0
   const counter = `${String(index + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`
 
   return (
@@ -290,12 +289,6 @@ function ExperienceCard({
               <span className="h-px w-10 bg-gradient-to-r from-[color:var(--border)] to-transparent" />
             </div>
             <div className="flex items-center gap-2">
-              {isPresent && (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-300">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.9)]" />
-                  {t(lang, 'sections.experience.presentLabel')}
-                </span>
-              )}
               <span className="rounded-full border border-[color:var(--border)] bg-[color:var(--background)]/60 px-3 py-1 text-[11px] font-medium text-[color:var(--muted-foreground)] backdrop-blur">
                 {item.date}
               </span>

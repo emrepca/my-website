@@ -2,7 +2,10 @@
   {
     "id": "gesture-voice-twitter",
     "title": "Gesture and Voice Controlled Twitter (X) Automation",
-    "description": "Developed a real-time system to control Twitter (X) interactions using hand gestures and voice commands.",
+    "description": {
+      "en": "Developed a real-time system to control Twitter (X) interactions using hand gestures and voice commands.",
+      "tr": "El hareketleri ve sesli komutlarla Twitter (X) etkileşimlerini kontrol eden gerçek zamanlı bir sistem geliştirdim."
+    },
     "technologies": ["Python", "Selenium", "OpenCV", "Mediapipe", "SpeechRecognition", "Threading"],
     "problem": "",
     "solution": "",
@@ -14,7 +17,10 @@
   {
     "id": "linux-ip-cli",
     "title": "Linux-Based IP Management CLI Tool",
-    "description": "Developed a Python-based CLI tool to manage network interface IP configurations.",
+    "description": {
+      "en": "Developed a Python-based CLI tool to manage network interface IP configurations.",
+      "tr": "Ağ arayüzü IP yapılandırmalarını yönetmek için Python tabanlı bir komut satırı (CLI) aracı geliştirdim."
+    },
     "technologies": ["Python", "subprocess", "argparse", "re"],
     "problem": "",
     "solution": "",
@@ -26,7 +32,10 @@
   {
     "id": "arp-scanner",
     "title": "ARP Network Scanner",
-    "description": "Built an ARP-based network scanning tool using Python and Scapy.",
+    "description": {
+      "en": "Built an ARP-based network scanning tool using Python and Scapy.",
+      "tr": "Python ve Scapy kullanarak ARP tabanlı bir ağ tarama aracı geliştirdim."
+    },
     "technologies": ["Python", "Scapy"],
     "problem": "",
     "solution": "",

@@ -1,3 +1,8 @@
+import type { Locale } from '@/constants/config'
+
+/** A string provided in every supported locale. */
+export type LocalizedText = Record<Locale, string>
+
 export interface PersonalInfo {
   fullName: string
   title: string
@@ -46,7 +51,7 @@ export interface CVData {
 export interface ProjectShowcase {
   id: string
   title: string
-  description: string
+  description: LocalizedText
   technologies: string[]
   problem?: string
   solution?: string

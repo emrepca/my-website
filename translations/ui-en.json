@@ -22,9 +22,9 @@
     },
     "experience": {
       "label": "Experience",
-      "title": "A professional journey, told in chapters",
+      "title": "My Professional Journey",
       "subtitle": "Career Path",
-      "support": "Scroll through the milestones — each role shaped a different layer of the engineer I am today.",
+      "support": "Explore the milestones of my professional journey.",
       "progress": "Journey",
       "presentLabel": "Now",
       "stack": "Stack",
@@ -33,7 +33,7 @@
     "projects": {
       "label": "Projects",
       "title": "Selected work",
-      "subtitle": "Case Studies",
+      "subtitle": "Projects",
       "viewCode": "View Code",
       "viewLive": "Live Demo",
       "problem": "Problem",

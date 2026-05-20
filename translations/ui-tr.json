@@ -18,13 +18,13 @@
     "about": {
       "label": "Hakkımda",
       "title": "Üretmeye odaklı bir mühendis",
-      "subtitle": "Profil"
+      "subtitle": "PROFİL"
     },
     "experience": {
-      "label": "Deneyim",
-      "title": "Bölüm bölüm anlatılan profesyonel bir yolculuk",
-      "subtitle": "Kariyer Yolu",
-      "support": "Kilometre taşlarını gez — her rol, bugünkü mühendisin farklı bir katmanını şekillendirdi.",
+      "label": "DENEYİM",
+      "title": "Profesyonel yolculuğum",
+      "subtitle": "KARİYER YOLU",
+      "support": "Profesyonel yolculuğumda geçirdiğim dönüm noktalarını keşfedin.",
       "progress": "Yolculuk",
       "presentLabel": "Şimdi",
       "stack": "Teknolojiler",
@@ -33,7 +33,7 @@
     "projects": {
       "label": "Projeler",
       "title": "Seçili çalışmalar",
-      "subtitle": "Vaka Çalışmaları",
+      "subtitle": "PROJELER",
       "viewCode": "Kodu Gör",
       "viewLive": "Canlı Demo",
       "problem": "Problem",
@@ -43,25 +43,25 @@
     "techStack": {
       "label": "Teknolojiler",
       "title": "Kullandığım araçlar",
-      "subtitle": "Yetenekler & Teknolojiler"
+      "subtitle": "YETENEKLER & TEKNOLOJİLER"
     },
     "education": {
       "label": "Eğitim",
       "title": "Akademik geçmiş",
-      "subtitle": "Öğrenim",
+      "subtitle": "ÖĞRENİM",
       "grade": "Not"
     },
     "certifications": {
       "label": "Sertifikalar",
       "title": "Doğrulanmış başarılar",
-      "subtitle": "Görsel Galeri",
+      "subtitle": "GÖRSEL GALERİ",
       "openPdf": "Sertifikayı aç",
       "close": "Kapat"
     },
     "contact": {
       "label": "İletişim",
       "title": "Birlikte bir şeyler üretelim",
-      "subtitle": "İletişime geçin",
+      "subtitle": "İLETİŞİME GEÇİN",
       "email": "E-posta",
       "phone": "Telefon",
       "linkedin": "LinkedIn",

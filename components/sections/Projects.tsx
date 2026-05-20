@@ -63,7 +63,7 @@ export function Projects({ lang, projects }: ProjectsProps) {
 
               <h3 className="text-lg font-bold text-foreground md:text-xl">{project.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted-foreground)]">
-                {project.description}
+                {project.description[lang]}
               </p>
 
               {(project.problem || project.solution || project.result) && (
