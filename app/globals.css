@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0a0a0f;
+    --foreground: #f1f5f9;
+    --card: #111118;
+    --card-foreground: #f1f5f9;
+    --border: rgba(255, 255, 255, 0.07);
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --accent-foreground: #ffffff;
+    --muted: #1e1e2a;
+    --muted-foreground: #94a3b8;
+    --radius: 0.75rem;
+  }
+
+  .light {
+    --background: #f8fafc;
+    --foreground: #0f0f23;
+    --card: #ffffff;
+    --card-foreground: #0f0f23;
+    --border: rgba(0, 0, 0, 0.08);
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --accent-foreground: #ffffff;
+    --muted: #e2e8f0;
+    --muted-foreground: #64748b;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    transition: background-color 300ms ease, color 300ms ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--muted);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+  }
+}
+
+@layer utilities {
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: color-mix(in srgb, var(--background) 70%, transparent);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: color-mix(in srgb, var(--card) 80%, transparent);
+    border: 1px solid var(--border);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent), #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black, transparent 70%);
+  }
+
+  .accent-glow {
+    box-shadow: 0 0 40px -10px var(--accent);
+  }
+
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+}

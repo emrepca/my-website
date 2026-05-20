@@ -1,0 +1,113 @@
+{
+  "personal_information": {
+    "full_name": "Muhammet Emre Paça",
+    "title": "Computer Engineer",
+    "phone": "+90 541 488 42 53",
+    "email": "emrepaca3@gmail.com",
+    "languages": "English Intermediate (B1-B2)",
+    "date_of_birth": "May 11, 2001",
+    "city": "Mersin",
+    "linkedin": "/in/emre-paca",
+    "github": "/emrepca",
+    "medium": "/@emrepaca3"
+  },
+  "professional_summary": "Computer Engineering graduate with a strong foundation in both software development and testing processes. Proficient in C# (.NET), Python, and web technologies, with hands-on experience in manual testing, test case design, and bug tracking. Familiar with SDLC and Agile methodologies, and focused on solving technical problems through analytical thinking.",
+  "education": [
+    {
+      "institution": "Bülent Ecevit University",
+      "degree": "Computer Engineering",
+      "years": "2020-2024",
+      "gpa": "3.43"
+    },
+    {
+      "institution": "Tarsus Borsa Istanbul Şehit Umut Sami Şensoy Anatolian High School",
+      "track": "Science Track",
+      "years": "2015-2019",
+      "grade": "74.78"
+    }
+  ],
+  "skills": {
+    "programming_languages": ["C# (.NET)", "Python", "JavaScript"],
+    "web_technologies": ["HTML5", "CSS3"],
+    "test_and_qa": ["Manual Testing", "Test Case Design", "Bug Tracking", "Regression Testing"],
+    "test_automation": ["Selenium (Python, C#)"],
+    "api_testing": ["Postman", "REST API Testing"],
+    "databases": ["SQL"],
+    "cloud_and_version_control": ["Google Cloud Run", "Git", "GitHub"],
+    "operating_systems": ["Linux (Ubuntu, Kali Linux)"],
+    "test_management_tools": ["Jira", "TestRail", "Confluence"]
+  },
+  "work_experience": [
+    {
+      "company": "Gini Talent",
+      "role": "Freelance Test / Quality Analyst",
+      "date": "Aug 2024 - Aug 2025",
+      "responsibilities": [
+        "Performed manual testing and quality evaluation of search engine results.",
+        "Analyzed query-result relevance and conducted accuracy and consistency testing.",
+        "Designed and executed test scenarios based on predefined evaluation criteria.",
+        "Identified spam, misleading, and policy-violating content through quality checks.",
+        "Evaluated the impact of algorithmic ranking on user experience and provided improvement suggestions.",
+        "Reported findings based on quality metrics and delivered structured feedback."
+      ],
+      "technologies": ["Manual Testing", "Search Quality", "Test Scenarios", "QA Metrics"]
+    },
+    {
+      "company": "Beyes Bilişim",
+      "role": "Software Development & Project Intern",
+      "date": "Aug 2024 - Sep 2024",
+      "responsibilities": [
+        "Contributed to the development of a Unity and C#-based application.",
+        "Supported backend development using Python.",
+        "Participated in API integration processes.",
+        "Assisted in functional testing and validation activities during development.",
+        "Contributed to the integration of the LLaVA AI model and supported post-integration validation.",
+        "Performed basic server management and verification tasks using Remote-SSH."
+      ],
+      "technologies": ["Unity", "C#", "Python", "REST APIs", "LLaVA", "Remote-SSH"]
+    },
+    {
+      "company": "Mono Bilişim",
+      "role": "Cloud & Web Deployment Intern",
+      "date": "Aug 2023 - Sep 2023",
+      "responsibilities": [
+        "Managed Ubuntu-based VM instances on Google Cloud Platform.",
+        "Deployed web applications via SSH on remote servers.",
+        "Configured Caddy Web Server and managed SSL certificate validation.",
+        "Gained hands-on experience in DNS, IP addressing, and networking fundamentals.",
+        "Contributed to deployment and performed post-deployment validation checks."
+      ],
+      "technologies": ["Google Cloud", "Ubuntu", "Caddy", "SSH", "SSL/DNS"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Gesture and Voice Controlled Twitter (X) Automation",
+      "description": "Developed a real-time system to control Twitter (X) interactions using hand gestures and voice commands.",
+      "technologies": ["Python", "Selenium", "OpenCV", "Mediapipe", "SpeechRecognition", "Threading"],
+      "details": "Implemented Selenium-based UI interaction and automation workflows. Conducted testing and prepared structured reports for system outputs."
+    },
+    {
+      "title": "Linux-Based IP Management CLI Tool",
+      "description": "Developed a Python-based CLI tool to manage network interface IP configurations.",
+      "technologies": ["Python", "subprocess", "argparse", "re"],
+      "details": "Automated command-line operations and integrated system-level commands for network configuration management."
+    },
+    {
+      "title": "ARP Network Scanner",
+      "description": "Built an ARP-based network scanning tool using Python and Scapy.",
+      "technologies": ["Python", "Scapy"],
+      "details": "Detected devices' IP, MAC addresses, and vendor information. Generated structured outputs for analysis and reporting."
+    }
+  ],
+  "certifications": [
+    "ISTQB Certified Tester Foundation Level (CTFL) - ISTQB",
+    "Software Testing - EPAM Systems",
+    "Software Testing Training - Udemy",
+    "Agile Project Management - BTK Academy",
+    "C# Programming - Udemy",
+    ".NET Design Patterns & ASP.NET Core & Unit Testing in .NET - EPAM Systems",
+    ".NET C# Advanced & Data Processing - EPAM Systems",
+    "Git, GitHub - BTK Academy"
+  ]
+}

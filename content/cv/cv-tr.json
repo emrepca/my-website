@@ -1,0 +1,113 @@
+{
+  "kisisel_bilgiler": {
+    "ad_soyad": "Muhammet Emre Paça",
+    "unvan": "Bilgisayar Mühendisi",
+    "telefon": "+90 541 488 42 53",
+    "e_posta": "emrepaca3@gmail.com",
+    "yabanci_diller": "İngilizce Orta Seviye (B1-B2)",
+    "dogum_tarihi": "11 Mayıs 2001",
+    "sehir": "Mersin",
+    "linkedin": "/in/emre-paca",
+    "github": "/emrepca",
+    "medium": "/@emrepaca3"
+  },
+  "profesyonel_ozet": "Hem yazılım geliştirme hem de test süreçlerinde güçlü bir temele sahip Bilgisayar Mühendisliği mezunuyum. C# (.NET), Python ve web teknolojilerinde yetkin; manuel test, test senaryosu tasarımı ve hata takibi konularında pratik deneyime sahibim. SDLC (Yazılım Geliştirme Yaşam Döngüsü) ve Agile (Çevik) metodolojilerine aşinayım; analitik düşünme yoluyla teknik problemleri çözmeye odaklanıyorum.",
+  "egitim": [
+    {
+      "kurum": "Bülent Ecevit Üniversitesi",
+      "bolum": "Bilgisayar Mühendisliği",
+      "yillar": "2020-2024",
+      "gano": "3.43"
+    },
+    {
+      "kurum": "Tarsus Borsa İstanbul Şehit Umut Sami Şensoy Anadolu Lisesi",
+      "alan": "Sayısal Bölüm",
+      "yillar": "2015-2019",
+      "diploma_notu": "74.78"
+    }
+  ],
+  "yetenekler": {
+    "programlama_dilleri": ["C# (.NET)", "Python", "JavaScript"],
+    "web_teknolojileri": ["HTML5", "CSS3"],
+    "test_ve_kalite_guvence": ["Manuel Test", "Test Senaryosu Tasarımı", "Hata Takibi (Bug Tracking)", "Regresyon Testi"],
+    "test_otomasyonu": ["Selenium (Python, C#)"],
+    "api_testi": ["Postman", "REST API Testi"],
+    "veri_tabanlari": ["SQL"],
+    "bulut_ve_versiyon_kontrolu": ["Google Cloud Run", "Git", "GitHub"],
+    "isletim_sistemleri": ["Linux (Ubuntu, Kali Linux)"],
+    "test_yonetim_araclari": ["Jira", "TestRail", "Confluence"]
+  },
+  "is_deneyimi": [
+    {
+      "sirket": "Gini Talent",
+      "unvan": "Serbest Zamanlı (Freelance) Test / Kalite Analisti",
+      "tarih": "Ağustos 2024 - Ağustos 2025",
+      "sorumluluklar": [
+        "Arama motoru sonuçlarının manuel testlerini ve kalite değerlendirmelerini gerçekleştirdim.",
+        "Sorgu-sonuç ilişkisini analiz ederek doğruluk ve tutarlılık testleri yürüttüm.",
+        "Önceden tanımlanmış değerlendirme kriterlerine göre test senaryoları tasarladım ve uyguladım.",
+        "Kalite kontrolleri aracılığıyla spam, yanıltıcı ve politika ihlali içeren içerikleri tespit ettim.",
+        "Algoritmik sıralamanın kullanıcı deneyimi üzerindeki etkisini değerlendirerek iyileştirme önerileri sundum.",
+        "Bulguları kalite metriklerine göre raporladım ve yapılandırılmış geri bildirimler sağladım."
+      ],
+      "teknolojiler": ["Manuel Test", "Arama Kalitesi", "Test Senaryoları", "Kalite Metrikleri"]
+    },
+    {
+      "sirket": "Beyes Bilişim",
+      "unvan": "Yazılım Geliştirme ve Proje Stajyeri",
+      "tarih": "Ağustos 2024 - Eylül 2024",
+      "sorumluluklar": [
+        "Unity ve C# tabanlı bir uygulamanın geliştirilmesine katkıda bulundum.",
+        "Python kullanarak arka uç (backend) geliştirmelerine destek verdim.",
+        "API entegrasyon süreçlerinde yer aldım.",
+        "Geliştirme aşamasındaki fonksiyonel test ve doğrulama faaliyetlerine yardımcı oldum.",
+        "LLaVA yapay zeka modelinin entegrasyonuna katkı sağladım ve entegrasyon sonrası doğrulama süreçlerini destekledim.",
+        "Remote-SSH kullanarak temel sunucu yönetimi ve doğrulama görevlerini yerine getirdim."
+      ],
+      "teknolojiler": ["Unity", "C#", "Python", "REST API", "LLaVA", "Remote-SSH"]
+    },
+    {
+      "sirket": "Mono Bilişim",
+      "unvan": "Bulut ve Web Dağıtım (Deployment) Stajyeri",
+      "tarih": "Ağustos 2023 - Eylül 2023",
+      "sorumluluklar": [
+        "Google Cloud Platform üzerindeki Ubuntu tabanlı sanal makine (VM) örneklerini yönettim.",
+        "Uzak sunuculara SSH üzerinden web uygulamaları canlıya aldım (deployment).",
+        "Caddy Web Sunucusunu yapılandırdım ve SSL sertifikası doğrulama süreçlerini yönettim.",
+        "DNS, IP adresleme ve ağ temelleri konularında pratik deneyim kazandım.",
+        "Canlıya alma süreçlerine katkıda bulundum ve dağıtım sonrası doğrulama kontrollerini gerçekleştirdim."
+      ],
+      "teknolojiler": ["Google Cloud", "Ubuntu", "Caddy", "SSH", "SSL/DNS"]
+    }
+  ],
+  "projeler": [
+    {
+      "baslik": "Hareket ve Ses Kontrollü Twitter (X) Otomasyonu",
+      "tanim": "El hareketleri ve sesli komutlar kullanarak Twitter (X) etkileşimlerini gerçek zamanlı kontrol eden bir sistem geliştirildi.",
+      "teknolojiler": ["Python", "Selenium", "OpenCV", "Mediapipe", "SpeechRecognition", "Threading"],
+      "detaylar": "Selenium tabanlı kullanıcı arayüzü etkileşimi ve otomasyon iş akışları uygulandı. Testler yürütüldü ve sistem çıktıları için yapılandırılmış raporlar hazırlandı."
+    },
+    {
+      "baslik": "Linux Tabanlı IP Yönetimi CLI Aracı",
+      "tanim": "Ağ arayüzü IP yapılandırmalarını yönetmek için Python tabanlı bir komut satırı arayüzü (CLI) aracı geliştirildi.",
+      "teknolojiler": ["Python", "subprocess", "argparse", "re"],
+      "detaylar": "Komut satırı işlemleri otomatikleştirildi ve ağ yapılandırma yönetimi için sistem düzeyindeki komutlar entegre edildi."
+    },
+    {
+      "baslik": "ARP Ağ Tarayıcı",
+      "tanim": "Python ve Scapy kullanılarak ARP tabanlı bir ağ tarama aracı geliştirildi.",
+      "teknolojiler": ["Python", "Scapy"],
+      "detaylar": "Cihazların IP, MAC adresleri ve üretici (vendor) bilgileri tespit edildi. Analiz ve raporlama için yapılandırılmış çıktılar üretildi."
+    }
+  ],
+  "sertifikalar": [
+    "ISTQB Sertifikalı Test Uzmanı Temel Seviye (CTFL) - ISTQB",
+    "Yazılım Testi - EPAM Systems",
+    "Yazılım Testi Eğitimi - Udemy",
+    "Agile (Çevik) Proje Yönetimi - BTK Akademi",
+    "C# Programlama - Udemy",
+    ".NET Tasarım Desenleri & ASP.NET Core & .NET'te Birim (Unit) Testi - EPAM Systems",
+    "İleri Seviye .NET C# & Veri İşleme - EPAM Systems",
+    "Git, GitHub - BTK Academy"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "skills": "Teknolojiler",
+    "education": "Eğitim",
+    "certifications": "Sertifikalar",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "greeting": "Merhaba, ben",
+    "viewProjects": "Projeleri Gör",
+    "contactMe": "İletişime Geç",
+    "availability": "Yeni fırsatlara açık"
+  },
+  "sections": {
+    "about": {
+      "label": "Hakkımda",
+      "title": "Üretmeye odaklı bir mühendis",
+      "subtitle": "Profil"
+    },
+    "experience": {
+      "label": "Deneyim",
+      "title": "Bölüm bölüm anlatılan profesyonel bir yolculuk",
+      "subtitle": "Kariyer Yolu",
+      "support": "Kilometre taşlarını gez — her rol, bugünkü mühendisin farklı bir katmanını şekillendirdi.",
+      "progress": "Yolculuk",
+      "presentLabel": "Şimdi",
+      "stack": "Teknolojiler",
+      "highlights": "Öne Çıkanlar"
+    },
+    "projects": {
+      "label": "Projeler",
+      "title": "Seçili çalışmalar",
+      "subtitle": "Vaka Çalışmaları",
+      "viewCode": "Kodu Gör",
+      "viewLive": "Canlı Demo",
+      "problem": "Problem",
+      "solution": "Çözüm",
+      "result": "Sonuç"
+    },
+    "techStack": {
+      "label": "Teknolojiler",
+      "title": "Kullandığım araçlar",
+      "subtitle": "Yetenekler & Teknolojiler"
+    },
+    "education": {
+      "label": "Eğitim",
+      "title": "Akademik geçmiş",
+      "subtitle": "Öğrenim",
+      "grade": "Not"
+    },
+    "certifications": {
+      "label": "Sertifikalar",
+      "title": "Doğrulanmış başarılar",
+      "subtitle": "Görsel Galeri",
+      "openPdf": "Sertifikayı aç",
+      "close": "Kapat"
+    },
+    "contact": {
+      "label": "İletişim",
+      "title": "Birlikte bir şeyler üretelim",
+      "subtitle": "İletişime geçin",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "medium": "Medium",
+      "location": "Konum",
+      "sendEmail": "E-posta Gönder"
+    }
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır.",
+    "builtWith": "Next.js, Tailwind CSS ve Framer Motion ile geliştirildi."
+  },
+  "common": {
+    "language": "Dil",
+    "theme": "Tema",
+    "darkMode": "Karanlık mod",
+    "lightMode": "Aydınlık mod",
+    "menu": "Menü"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Tech Stack",
+    "education": "Education",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "availability": "Open to opportunities"
+  },
+  "sections": {
+    "about": {
+      "label": "About Me",
+      "title": "A focused engineer with a builder's mindset",
+      "subtitle": "Background"
+    },
+    "experience": {
+      "label": "Experience",
+      "title": "A professional journey, told in chapters",
+      "subtitle": "Career Path",
+      "support": "Scroll through the milestones — each role shaped a different layer of the engineer I am today.",
+      "progress": "Journey",
+      "presentLabel": "Now",
+      "stack": "Stack",
+      "highlights": "Highlights"
+    },
+    "projects": {
+      "label": "Projects",
+      "title": "Selected work",
+      "subtitle": "Case Studies",
+      "viewCode": "View Code",
+      "viewLive": "Live Demo",
+      "problem": "Problem",
+      "solution": "Solution",
+      "result": "Result"
+    },
+    "techStack": {
+      "label": "Tech Stack",
+      "title": "Tools I work with",
+      "subtitle": "Skills & Technologies"
+    },
+    "education": {
+      "label": "Education",
+      "title": "Academic background",
+      "subtitle": "Learning",
+      "grade": "Grade"
+    },
+    "certifications": {
+      "label": "Certifications",
+      "title": "Verified achievements",
+      "subtitle": "Visual Gallery",
+      "openPdf": "Open certificate",
+      "close": "Close"
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Let's build something together",
+      "subtitle": "Get in touch",
+      "email": "Email",
+      "phone": "Phone",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "medium": "Medium",
+      "location": "Location",
+      "sendEmail": "Send Email"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS & Framer Motion."
+  },
+  "common": {
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode",
+    "menu": "Menu"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "gesture-voice-twitter",
+    "title": "Gesture and Voice Controlled Twitter (X) Automation",
+    "description": "Developed a real-time system to control Twitter (X) interactions using hand gestures and voice commands.",
+    "technologies": ["Python", "Selenium", "OpenCV", "Mediapipe", "SpeechRecognition", "Threading"],
+    "problem": "",
+    "solution": "",
+    "result": "",
+    "github_url": "https://github.com/emrepca/hand-gesture-twitter-control",
+    "demo_url": "",
+    "image": "/projects/project1.png"
+  },
+  {
+    "id": "linux-ip-cli",
+    "title": "Linux-Based IP Management CLI Tool",
+    "description": "Developed a Python-based CLI tool to manage network interface IP configurations.",
+    "technologies": ["Python", "subprocess", "argparse", "re"],
+    "problem": "",
+    "solution": "",
+    "result": "",
+    "github_url": "https://github.com/emrepca/linux-ip-changer",
+    "demo_url": "",
+    "image": "/projects/project2.png"
+  },
+  {
+    "id": "arp-scanner",
+    "title": "ARP Network Scanner",
+    "description": "Built an ARP-based network scanning tool using Python and Scapy.",
+    "technologies": ["Python", "Scapy"],
+    "problem": "",
+    "solution": "",
+    "result": "",
+    "github_url": "https://github.com/emrepca/net-scanner",
+    "demo_url": "",
+    "image": "/projects/project3.png"
+  }
+]
