@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { LOCALES, SITE_CONFIG, type Locale } from '@/constants/config'
 import { loadCV } from '@/lib/cv'
+import { WhatsappButton } from '@/components/shared/WhatsappButton'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -55,5 +56,10 @@ export async function generateMetadata({
 export default async function LangLayout({ children, params }: LayoutProps) {
   const { lang } = await params
   if (!LOCALES.includes(lang as Locale)) notFound()
-  return <>{children}</>
+  return (
+    <>
+      {children}
+      <WhatsappButton lang={lang as Locale} />
+    </>
+  )
 }

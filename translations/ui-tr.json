@@ -75,6 +75,10 @@
     "rights": "Tüm hakları saklıdır.",
     "builtWith": "Next.js, Tailwind CSS ve Framer Motion ile geliştirildi."
   },
+  "whatsapp": {
+    "label": "WhatsApp'tan yazın",
+    "message": "Merhaba Emre, portföy web sitenizi gördüm ve sizinle iletişime geçmek istiyorum."
+  },
   "common": {
     "language": "Dil",
     "theme": "Tema",

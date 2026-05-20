@@ -75,6 +75,10 @@
     "rights": "All rights reserved.",
     "builtWith": "Built with Next.js, Tailwind CSS & Framer Motion."
   },
+  "whatsapp": {
+    "label": "Chat on WhatsApp",
+    "message": "Hello Emre, I found your portfolio website and would like to connect."
+  },
   "common": {
     "language": "Language",
     "theme": "Theme",
