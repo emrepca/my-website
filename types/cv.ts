@@ -59,6 +59,8 @@ export interface ProjectShowcase {
   github_url?: string
   demo_url?: string
   image?: string
+  /** Optional light-mode variant of `image`. `image` is used in dark mode. */
+  imageLight?: string
 }
 
 export interface CertificatesIndex {

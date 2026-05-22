@@ -1,8 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTheme } from 'next-themes'
 import { ArrowUpRight, Github, ExternalLink, FolderKanban } from 'lucide-react'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { SectionWrapper } from '@/components/shared/SectionWrapper'
 import { t } from '@/lib/i18n'
 import type { Locale } from '@/constants/config'
@@ -14,6 +16,11 @@ interface ProjectsProps {
 }
 
 export function Projects({ lang, projects }: ProjectsProps) {
+  const { theme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const isDark = (mounted ? resolvedTheme ?? theme : 'dark') === 'dark'
+
   return (
     <SectionWrapper
       id="projects"
@@ -21,7 +28,11 @@ export function Projects({ lang, projects }: ProjectsProps) {
       title={t(lang, 'sections.projects.title')}
     >
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {projects.map((project, i) => (
+        {projects.map((project, i) => {
+          const imageSrc =
+            !isDark && project.imageLight ? project.imageLight : project.image
+
+          return (
           <motion.article
             key={project.id}
             initial={{ opacity: 0, y: 24 }}
@@ -31,9 +42,9 @@ export function Projects({ lang, projects }: ProjectsProps) {
             className="group relative flex flex-col overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--accent)]/40 hover:shadow-[0_0_50px_-15px_var(--accent)]"
           >
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-[color:var(--muted)]/30">
-              {project.image ? (
+              {imageSrc ? (
                 <Image
-                  src={project.image}
+                  src={imageSrc}
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -121,7 +132,8 @@ export function Projects({ lang, projects }: ProjectsProps) {
               </div>
             </div>
           </motion.article>
-        ))}
+          )
+        })}
       </div>
     </SectionWrapper>
   )

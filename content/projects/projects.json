@@ -43,5 +43,21 @@
     "github_url": "https://github.com/emrepca/net-scanner",
     "demo_url": "",
     "image": "/projects/project3.png"
+  },
+  {
+    "id": "my-website",
+    "title": "My Website",
+    "description": {
+      "en": "Designed and built this personal portfolio website with Next.js 15 and TypeScript, featuring bilingual content, dark mode, and live GitHub activity integration.",
+      "tr": "Bu kişisel portföy web sitesini Next.js 15 ve TypeScript ile tasarlayıp geliştirdim; iki dilli içerik, karanlık mod ve canlı GitHub aktivite entegrasyonu içeriyor."
+    },
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "problem": "",
+    "solution": "",
+    "result": "",
+    "github_url": "https://github.com/emrepca/my-website",
+    "demo_url": "",
+    "image": "/projects/project4.png",
+    "imageLight": "/projects/project4-dark.png"
   }
 ]
