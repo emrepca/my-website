@@ -236,18 +236,18 @@ async function fetchCalendarPublic(): Promise<ContributionCalendar | null> {
 
 /* ------------------------------ Transforms -------------------------------- */
 
-function sumCounts(days: ContributionDay[]): number {
+export function sumCounts(days: ContributionDay[]): number {
   return days.reduce((sum, day) => sum + day.count, 0)
 }
 
-function clampLevel(value: number): ContributionLevel {
+export function clampLevel(value: number): ContributionLevel {
   const rounded = Math.round(value)
   if (rounded <= 0) return 0
   if (rounded >= 4) return 4
   return rounded as ContributionLevel
 }
 
-function computeStreaks(days: ContributionDay[]): { current: number; longest: number } {
+export function computeStreaks(days: ContributionDay[]): { current: number; longest: number } {
   if (days.length === 0) return { current: 0, longest: 0 }
   const sorted = [...days].sort((a, b) => a.date.localeCompare(b.date))
 
@@ -275,7 +275,7 @@ function computeStreaks(days: ContributionDay[]): { current: number; longest: nu
   return { current, longest }
 }
 
-function computeLanguages(repos: RawRepo[]): LanguageStat[] {
+export function computeLanguages(repos: RawRepo[]): LanguageStat[] {
   const counts = new Map<string, number>()
   for (const repo of repos) {
     if (repo.fork || !repo.language) continue
@@ -295,7 +295,7 @@ function computeLanguages(repos: RawRepo[]): LanguageStat[] {
     .slice(0, 6)
 }
 
-function mapEvents(events: RawEvent[]): ActivityItem[] {
+export function mapEvents(events: RawEvent[]): ActivityItem[] {
   const items: ActivityItem[] = []
 
   for (const event of events) {
