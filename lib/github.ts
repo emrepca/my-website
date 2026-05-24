@@ -22,7 +22,7 @@ import type {
  */
 
 const API_BASE = 'https://api.github.com'
-const REVALIDATE = 1800 // 30 minutes
+const REVALIDATE = 300 // 5 minutes
 
 const FALLBACK_COLOR = '#6366f1'
 

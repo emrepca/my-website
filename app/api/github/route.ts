@@ -3,13 +3,15 @@ import { getGitHubData } from '@/lib/github'
 import type { GitHubData } from '@/types/github'
 
 /**
- * Cached GitHub activity endpoint.
+ * GitHub activity endpoint.
  *
- * The route response is regenerated at most once every 30 minutes (ISR), and
- * the underlying GitHub fetches are themselves cached — so the GitHub API is
- * never hammered, regardless of how much traffic this endpoint receives.
+ * The route runs on every request, but the underlying GitHub fetches are
+ * cached in the Next.js Data Cache (see `lib/github.ts`) — so the GitHub API
+ * is only hit at most a handful of times per revalidation window, regardless
+ * of traffic. Running the handler each time keeps `generatedAt` fresh and
+ * avoids ISR-wide route caching freezing the response between revalidations.
  */
-export const revalidate = 1800
+export const dynamic = 'force-dynamic'
 
 export async function GET() {
   try {
