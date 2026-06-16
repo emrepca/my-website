@@ -39,6 +39,21 @@
   },
   "work_experience": [
     {
+      "company": "Mevsim Construction",
+      "role": "System Administrator / IT Specialist",
+      "date": "June 2026 - Present",
+      "responsibilities": [
+        "Managing the company's IT infrastructure, system continuity, and end-user support processes.",
+        "Coordinating backup operations while monitoring data security and disaster recovery procedures.",
+        "Providing ERP system administration, including user management, access permissions, and operational support.",
+        "Participating in the ERP migration process by designing test scenarios and conducting functional and user acceptance testing (UAT).",
+        "Delivering technical support to employees regarding hardware, software, network, and enterprise systems.",
+        "Analyzing system issues, troubleshooting technical problems, and contributing to process improvements.",
+        "Supporting the optimization of internal IT operations to improve efficiency and system reliability."
+      ],
+      "technologies": ["ERP Management", "System Administration", "Technical Support", "Backup & Data Security", "User Management", "Manual Testing", "User Acceptance Testing (UAT)", "Windows Systems", "Networking Fundamentals"]
+    },
+    {
       "company": "Gini Talent",
       "role": "Freelance Test / Quality Analyst",
       "date": "Aug 2024 - Aug 2025",

@@ -39,6 +39,21 @@
   },
   "is_deneyimi": [
     {
+      "sirket": "Mevsim İnşaat",
+      "unvan": "Sistem Yöneticisi / IT Uzmanı",
+      "tarih": "Haziran 2026 - Günümüz",
+      "sorumluluklar": [
+        "Şirketin IT altyapısının yönetimi, sistem sürekliliği ve kullanıcı destek süreçlerini yürütüyorum.",
+        "Şirket yedekleme süreçlerini planlıyor, veri güvenliği ve felaket kurtarma süreçlerini takip ediyorum.",
+        "ERP uygulamasının kullanıcı yönetimi, erişim yetkilendirmeleri ve operasyonel süreç desteğini sağlıyorum.",
+        "Yeni ERP sistemine geçiş sürecinde test senaryoları oluşturarak fonksiyonel ve kullanıcı kabul testleri gerçekleştiriyorum.",
+        "Çalışanlara donanım, yazılım, ağ ve kurumsal sistemler konusunda teknik destek sağlıyorum.",
+        "Sistem sorunlarını analiz ederek hata tespiti, çözüm geliştirme ve süreç iyileştirme çalışmaları yürütüyorum.",
+        "Şirket içi IT operasyonlarının verimliliğini artırmak amacıyla süreç optimizasyonlarına katkı sağlıyorum."
+      ],
+      "teknolojiler": ["ERP Yönetimi", "Sistem Yönetimi", "Teknik Destek", "Yedekleme ve Veri Güvenliği", "Kullanıcı Yönetimi", "Manuel Test", "UAT (User Acceptance Testing)", "Windows Sistemleri", "Ağ Temelleri"]
+    },
+    {
       "sirket": "Gini Talent",
       "unvan": "Serbest Zamanlı (Freelance) Test / Kalite Analisti",
       "tarih": "Ağustos 2024 - Ağustos 2025",
