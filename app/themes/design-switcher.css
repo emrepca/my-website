@@ -1,0 +1,391 @@
+/* ==========================================================================
+   Design switcher (`dsw-` = design switcher)
+   --------------------------------------------------------------------------
+   Deliberately written with its own class names instead of Tailwind
+   utilities: the neobrutalism skin re-skins the site by hooking onto utility
+   classes, so keeping the picker on private names means it can never be
+   restyled by accident. Its neobrutalism appearance is opted into explicitly
+   at the bottom of `neobrutalism.css`.
+   ========================================================================== */
+
+.dsw-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: rgba(4, 4, 10, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dsw-panel {
+  position: relative;
+  width: 100%;
+  max-width: 56rem;
+  margin: auto;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background-color: var(--card);
+  color: var(--foreground);
+  box-shadow: 0 40px 120px -40px rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .dsw-panel {
+    padding: 2.5rem 2.5rem 2rem;
+  }
+}
+
+.dsw-close {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background-color: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.dsw-close:hover {
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+
+.dsw-close__icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.dsw-eyebrow {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.dsw-title {
+  margin: 0.6rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+@media (min-width: 768px) {
+  .dsw-title {
+    font-size: 2rem;
+  }
+}
+
+.dsw-description {
+  margin: 0.6rem auto 0;
+  max-width: 34rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+.dsw-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  .dsw-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.dsw-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background-color: color-mix(in srgb, var(--muted) 26%, transparent);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.dsw-option:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 18px 40px -24px var(--accent);
+}
+
+.dsw-option[data-active='true'] {
+  border-color: var(--accent);
+}
+
+.dsw-option:focus-visible,
+.dsw-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.dsw-option__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.dsw-option__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dsw-option__name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.dsw-option__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dsw-option__badge-icon {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.dsw-option__blurb {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--muted-foreground);
+}
+
+.dsw-option__cta {
+  margin-top: 0.15rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.dsw-footnote {
+  margin: 1.25rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* --------------------------------------------------------------------------
+   Preview miniatures — hard-coded colours so each option always shows its own
+   skin regardless of what is currently applied to the page.
+   -------------------------------------------------------------------------- */
+
+.dsw-mock {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  border-radius: 0.75rem;
+  user-select: none;
+}
+
+.dsw-mock__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.65rem;
+}
+
+.dsw-mock__logo {
+  display: block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 9999px;
+}
+
+.dsw-mock__links {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.dsw-mock__links i {
+  display: block;
+  width: 1.15rem;
+  height: 0.3rem;
+  border-radius: 9999px;
+}
+
+.dsw-mock__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+  padding: 0.55rem 0.65rem;
+}
+
+.dsw-mock__h1 {
+  display: block;
+  width: 78%;
+  height: 0.62rem;
+  border-radius: 0.2rem;
+}
+
+.dsw-mock__h1--short {
+  width: 48%;
+}
+
+.dsw-mock__text {
+  display: block;
+  width: 92%;
+  height: 0.26rem;
+  border-radius: 9999px;
+}
+
+.dsw-mock__text--short {
+  width: 62%;
+}
+
+.dsw-mock__btn {
+  display: block;
+  width: 3.1rem;
+  height: 0.85rem;
+  margin-top: 0.25rem;
+  border-radius: 9999px;
+}
+
+.dsw-mock__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+}
+
+.dsw-mock__cards i {
+  display: block;
+  height: 1.35rem;
+  border-radius: 0.35rem;
+}
+
+/* Default skin preview — dark, soft, indigo. */
+.dsw-mock[data-mock='default'] {
+  background: radial-gradient(120% 90% at 50% -10%, #1c1c3a 0%, #0a0a0f 62%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.dsw-mock[data-mock='default'] .dsw-mock__logo {
+  background-color: #6366f1;
+  box-shadow: 0 0 10px -1px #6366f1;
+}
+
+.dsw-mock[data-mock='default'] .dsw-mock__links i {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.dsw-mock[data-mock='default'] .dsw-mock__h1 {
+  background: linear-gradient(90deg, #f1f5f9, #a5b4fc);
+}
+
+.dsw-mock[data-mock='default'] .dsw-mock__text {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.dsw-mock[data-mock='default'] .dsw-mock__btn {
+  background-color: #6366f1;
+  box-shadow: 0 0 16px -4px #6366f1;
+}
+
+.dsw-mock[data-mock='default'] .dsw-mock__cards i {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Neobrutalism preview — cream, flat, hard black edges. */
+.dsw-mock[data-mock='neobrutalism'] {
+  background-color: #fdf3e3;
+  border: 2px solid #000;
+  border-radius: 0.35rem;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__nav {
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__logo {
+  border-radius: 0.15rem;
+  background-color: #c2005f;
+  border: 2px solid #000;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__links i {
+  border-radius: 0.1rem;
+  background-color: #ffe27a;
+  border: 1px solid #000;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__h1 {
+  border-radius: 0.1rem;
+  background-color: #0a0a0a;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__text {
+  border-radius: 0.1rem;
+  background-color: #7a7a7a;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__btn {
+  border-radius: 0.15rem;
+  background-color: #c2005f;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__cards i {
+  border-radius: 0.15rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__cards i:first-child {
+  background-color: #7ae7ff;
+}
+
+.dsw-mock[data-mock='neobrutalism'] .dsw-mock__cards i:last-child {
+  background-color: #ff8fab;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dsw-option,
+  .dsw-close {
+    transition: none;
+  }
+
+  .dsw-option:hover {
+    transform: none;
+  }
+}

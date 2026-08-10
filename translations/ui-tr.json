@@ -135,6 +135,24 @@
     "label": "WhatsApp'tan yazın",
     "message": "Merhaba Emre, portföy web sitenizi gördüm ve sizinle iletişime geçmek istiyorum."
   },
+  "design": {
+    "eyebrow": "Bir görünüm seçin",
+    "title": "Tasarımınızı seçin",
+    "description": "Aynı site, aynı içerik — iki farklı görsel stil. Tercih ettiğinizi seçin.",
+    "use": "Bu tasarımı kullan →",
+    "active": "Aktif",
+    "change": "Temayı Değiştir",
+    "close": "Kapat",
+    "footnote": "Menüdeki palet simgesinden istediğiniz zaman değiştirebilirsiniz.",
+    "default": {
+      "name": "Mevcut Tasarım",
+      "blurb": "Sitenin bugünkü hâli — yumuşak derinlik, hafif parlama ve sakin kontrast."
+    },
+    "neobrutalism": {
+      "name": "Neobrutalizm",
+      "blurb": "Kalın siyah çerçeveler, düz doygun renkler ve sert kaydırılmış gölgeler."
+    }
+  },
   "common": {
     "language": "Dil",
     "theme": "Tema",

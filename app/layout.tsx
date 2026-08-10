@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/shared/ThemeProvider'
+import { DesignProvider } from '@/components/shared/DesignProvider'
 import { SITE_CONFIG } from '@/constants/config'
+import { DESIGN_INIT_SCRIPT } from '@/constants/design'
 import './globals.css'
+import './themes/neobrutalism.css'
+import './themes/design-switcher.css'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,6 +31,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <head>
+        {/* Applies the stored design skin before first paint (see DESIGN_INIT_SCRIPT). */}
+        <script dangerouslySetInnerHTML={{ __html: DESIGN_INIT_SCRIPT }} />
+      </head>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
@@ -34,7 +42,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange={false}
         >
-          {children}
+          <DesignProvider>{children}</DesignProvider>
         </ThemeProvider>
       </body>
     </html>

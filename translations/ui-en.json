@@ -135,6 +135,24 @@
     "label": "Chat on WhatsApp",
     "message": "Hello Emre, I found your portfolio website and would like to connect."
   },
+  "design": {
+    "eyebrow": "Pick a look",
+    "title": "Choose your design",
+    "description": "Same site, same content — two visual styles. Pick the one you prefer.",
+    "use": "Use this design →",
+    "active": "Active",
+    "change": "Change Theme",
+    "close": "Close",
+    "footnote": "You can switch at any time from the palette icon in the navigation.",
+    "default": {
+      "name": "Current Design",
+      "blurb": "The site exactly as it is today — soft depth, subtle glow and calm contrast."
+    },
+    "neobrutalism": {
+      "name": "Neobrutalism",
+      "blurb": "Thick black outlines, flat saturated colour and hard offset shadows."
+    }
+  },
   "common": {
     "language": "Language",
     "theme": "Theme",

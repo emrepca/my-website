@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import { Moon, Sun, Menu, X, Globe } from 'lucide-react'
 import { Logo } from '@/components/shared/Logo'
+import { DesignSwitchButton } from '@/components/shared/DesignSwitchButton'
 import { NAV_ITEMS, type Locale } from '@/constants/config'
 import { t } from '@/lib/i18n'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
@@ -84,6 +85,8 @@ export function Navbar({ lang }: NavbarProps) {
             <Globe className="h-3.5 w-3.5" />
             {otherLang}
           </Link>
+
+          <DesignSwitchButton lang={lang} />
 
           <button
             type="button"

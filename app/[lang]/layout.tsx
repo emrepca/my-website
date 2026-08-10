@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { LOCALES, SITE_CONFIG, type Locale } from '@/constants/config'
 import { loadCV } from '@/lib/cv'
 import { WhatsappButton } from '@/components/shared/WhatsappButton'
+import { DesignChooser } from '@/components/shared/DesignChooser'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -60,6 +61,7 @@ export default async function LangLayout({ children, params }: LayoutProps) {
     <>
       {children}
       <WhatsappButton lang={lang as Locale} />
+      <DesignChooser lang={lang as Locale} />
     </>
   )
 }

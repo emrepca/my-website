@@ -6,8 +6,10 @@
  */
 import { test, expect } from '@playwright/test'
 import { githubPayload } from './fixtures/github-payload'
+import { seedDesign } from './fixtures/design'
 
 test.beforeEach(async ({ page }) => {
+  await seedDesign(page)
   await page.route('**/api/github', (route) =>
     route.fulfill({
       status: 200,

@@ -1,0 +1,491 @@
+/* ==========================================================================
+   Neobrutalism skin
+   --------------------------------------------------------------------------
+   A pure-CSS re-skin, activated by <html data-design="neobrutalism">.
+
+   Nothing here changes markup, structure or behaviour: every rule hooks onto
+   utility classes the default design already ships, so both designs render the
+   exact same DOM. That is also why the selectors read as attribute matches on
+   `class` rather than as bespoke component classes.
+
+   It composes with the light/dark axis owned by next-themes:
+     html[data-design='neobrutalism']         → dark neobrutalism
+     html[data-design='neobrutalism'].light   → light (cream) neobrutalism
+   mirroring how globals.css treats `:root` as dark and `.light` as the override.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tokens
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] {
+  /* "Ink" is the single colour used for every border and every hard shadow. */
+  --nb-ink: #f5f5f5;
+  --nb-bw: 3px;
+  --nb-radius: 6px;
+  --nb-press: 4px;
+  --nb-shadow-sm: 3px 3px 0 var(--nb-ink);
+  --nb-shadow: 4px 4px 0 var(--nb-ink);
+  --nb-shadow-lg: 6px 6px 0 var(--nb-ink);
+
+  /* Focus ring — deliberately a different colour from the decorative borders
+     so keyboard focus is never mistaken for chrome. */
+  --nb-focus: #ffd93d;
+
+  /* Flat, saturated fills. Always paired with --nb-on-fill (black) text. */
+  --nb-c1: #ffd93d; /* yellow */
+  --nb-c2: #ff8fab; /* hot pink */
+  --nb-c3: #9df7b0; /* lime */
+  --nb-c4: #7ae7ff; /* cyan  */
+  --nb-c5: #ffb26b; /* orange */
+  --nb-c6: #c7b2ff; /* lavender */
+  --nb-on-fill: #0a0a0a;
+
+  /* Site tokens (dark). Yellow accent on near-black clears AA by a wide
+     margin both as text (13.3:1) and as a button fill with black label. */
+  --background: #101018;
+  --foreground: #ffffff;
+  --card: #1b1b26;
+  --card-foreground: #ffffff;
+  --border: var(--nb-ink);
+  --accent: #ffd93d;
+  --accent-hover: #ffe873;
+  --accent-foreground: #0a0a0a;
+  --muted: #2b2b3c;
+  --muted-foreground: #cfcfe0;
+  --radius: 0.25rem;
+}
+
+html[data-design='neobrutalism'].light {
+  --nb-ink: #000000;
+  --nb-focus: #0047ff;
+
+  /* Deep magenta rather than a pastel: --accent doubles as body-adjacent text
+     (section eyebrows, inline labels), so it has to clear 4.5:1 on cream
+     (5.6:1) while still carrying white label text on a filled button (6.1:1). */
+  --background: #fdf3e3;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --border: var(--nb-ink);
+  --accent: #c2005f;
+  --accent-hover: #9c004c;
+  --accent-foreground: #ffffff;
+  --muted: #ffe27a;
+  --muted-foreground: #2f2f2f;
+}
+
+/* --------------------------------------------------------------------------
+   2. Flatten every soft effect the default skin ships
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] .glass {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background-color: var(--card);
+  border-bottom-width: var(--nb-bw);
+  border-bottom-color: var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] .glass-card {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background-color: var(--card);
+  border-width: var(--nb-bw);
+  border-color: var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] [class*='backdrop-blur'] {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Blurred colour blobs are pure atmosphere — and atmosphere is exactly what
+   this style removes. They are decorative (`aria-hidden` / `pointer-events-none`)
+   so dropping them costs nothing semantically. */
+html[data-design='neobrutalism'] [class~='blur-md'],
+html[data-design='neobrutalism'] [class~='blur-lg'],
+html[data-design='neobrutalism'] [class~='blur-xl'],
+html[data-design='neobrutalism'] [class~='blur-2xl'],
+html[data-design='neobrutalism'] [class~='blur-3xl'],
+html[data-design='neobrutalism'] [class*='blur-['] {
+  display: none;
+}
+
+html[data-design='neobrutalism'] [class~='drop-shadow-2xl'] {
+  filter: none;
+}
+
+/* No gradients. The two hairlines and the bullet dot that *were* gradients
+   keep an explicit flat colour so nothing silently disappears. */
+html[data-design='neobrutalism'] [class*='bg-gradient-to-'] {
+  background-image: none;
+}
+
+html[data-design='neobrutalism'] [class*='bg-gradient-to-'][class*='from-[color:var(--accent)]'] {
+  background-color: var(--accent);
+}
+
+html[data-design='neobrutalism'] [class*='bg-gradient-to-'][class*='from-[color:var(--border)]'] {
+  background-color: var(--border);
+}
+
+/* Flat fills: card surfaces are opaque, never translucent. */
+html[data-design='neobrutalism'] [class*='bg-[color:var(--card)]'] {
+  background-color: var(--card);
+}
+
+/* Keep the backdrop grid, but as a printed rule rather than a glowing one. */
+html[data-design='neobrutalism'] .hero-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--nb-ink) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--nb-ink) 14%, transparent) 1px, transparent 1px);
+}
+
+/* --------------------------------------------------------------------------
+   3. Borders — uniform, solid, ink-coloured, on everything
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] [class~='border'],
+html[data-design='neobrutalism'] [class~='border-2'] {
+  border-width: var(--nb-bw);
+  border-style: solid;
+  border-color: var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] [class~='border-t'] {
+  border-top-width: var(--nb-bw);
+  border-top-color: var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] [class~='border-b'] {
+  border-bottom-width: var(--nb-bw);
+  border-bottom-color: var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] [class~='border-l'] {
+  border-left-width: var(--nb-bw);
+  border-left-color: var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] [class~='border-r'] {
+  border-right-width: var(--nb-bw);
+  border-right-color: var(--nb-ink);
+}
+
+/* --------------------------------------------------------------------------
+   4. Corners — minimal, never pill-soft on blocks
+   (rounded-full is left alone: dots, avatars and progress bars need it, and
+   pill controls read as intentional rather than raw.)
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] [class~='rounded-3xl'],
+html[data-design='neobrutalism'] [class~='rounded-2xl'],
+html[data-design='neobrutalism'] [class~='rounded-xl'],
+html[data-design='neobrutalism'] [class*='rounded-[28px]'] {
+  border-radius: var(--nb-radius);
+}
+
+/* --------------------------------------------------------------------------
+   5. Shadows — hard offsets only
+   -------------------------------------------------------------------------- */
+
+/* Wipe every soft/glow shadow the default skin declares… */
+html[data-design='neobrutalism'] [class*='shadow-'] {
+  box-shadow: none;
+}
+
+/* …then hand out flat, opaque, un-blurred offsets. */
+html[data-design='neobrutalism'] [class~='border'][class~='rounded-3xl'],
+html[data-design='neobrutalism'] [class~='border'][class~='rounded-2xl'] {
+  box-shadow: var(--nb-shadow-lg);
+}
+
+html[data-design='neobrutalism'] [class~='border'][class~='rounded-xl'],
+html[data-design='neobrutalism'] [class~='border'][class~='rounded-lg'],
+html[data-design='neobrutalism'] [class~='border'][class~='rounded-full'] {
+  box-shadow: var(--nb-shadow-sm);
+}
+
+/* --------------------------------------------------------------------------
+   6. Colour rotation — the "playful, intentionally designed" part
+   -------------------------------------------------------------------------- */
+
+/* Light: card grids print in flat saturated blocks with black copy. */
+html[data-design='neobrutalism'].light [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 1) {
+  background-color: var(--nb-c1);
+}
+html[data-design='neobrutalism'].light [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 2) {
+  background-color: var(--nb-c4);
+}
+html[data-design='neobrutalism'].light [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 3) {
+  background-color: var(--nb-c2);
+}
+html[data-design='neobrutalism'].light [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 4) {
+  background-color: var(--nb-c3);
+}
+html[data-design='neobrutalism'].light [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 5) {
+  background-color: var(--nb-c5);
+}
+html[data-design='neobrutalism'].light [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 6) {
+  background-color: var(--nb-c6);
+}
+
+/* --accent (deep magenta) clears AA on cream and on white, but not on the
+   saturated fills above — so inside a filled card, accent-coloured text and
+   icons switch to black. Accent *backgrounds* (bullet dots, chips) are
+   untouched: they are graphics, judged at 3:1. */
+html[data-design='neobrutalism'].light
+  [class~='grid']
+  > [class~='border'][class~='rounded-2xl']
+  [class*='text-[color:var(--accent)]'] {
+  color: var(--nb-on-fill);
+}
+
+/* Dark: saturated fills would break the 4.5:1 floor against white body copy,
+   so the colour moves into the shadow instead and the card stays dark. */
+html[data-design='neobrutalism']:not(.light) [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 1) {
+  box-shadow: 6px 6px 0 var(--nb-c1);
+}
+html[data-design='neobrutalism']:not(.light) [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 2) {
+  box-shadow: 6px 6px 0 var(--nb-c4);
+}
+html[data-design='neobrutalism']:not(.light) [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 3) {
+  box-shadow: 6px 6px 0 var(--nb-c2);
+}
+html[data-design='neobrutalism']:not(.light) [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 4) {
+  box-shadow: 6px 6px 0 var(--nb-c3);
+}
+html[data-design='neobrutalism']:not(.light) [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 5) {
+  box-shadow: 6px 6px 0 var(--nb-c5);
+}
+html[data-design='neobrutalism']:not(.light) [class~='grid'] > [class~='border'][class~='rounded-2xl']:nth-child(6n + 6) {
+  box-shadow: 6px 6px 0 var(--nb-c6);
+}
+
+/* --------------------------------------------------------------------------
+   7. Navigation — restyled only, never restructured
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] header[class~='fixed'] {
+  background-color: var(--card);
+  border-bottom: var(--nb-bw) solid var(--nb-ink);
+}
+
+/* The active-nav pill (a framer layout element) becomes a flat marker block.
+   `~=` matches the whole class token on purpose: `*=` would also catch the
+   `hover:bg-[color:var(--muted)]` on the neighbouring icon buttons and square
+   off their corners. */
+html[data-design='neobrutalism'] header [class~='bg-[color:var(--muted)]'] {
+  border: var(--nb-bw) solid var(--nb-ink);
+  border-radius: var(--nb-radius);
+}
+
+/* --------------------------------------------------------------------------
+   8. Typography — chunky headings, readable body
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] h1,
+html[data-design='neobrutalism'] h2 {
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+html[data-design='neobrutalism'] h3 {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+/* The gradient surname becomes a marker-pen highlight: flat fill, hard edge,
+   black text (never white-on-yellow). */
+html[data-design='neobrutalism'] .text-gradient {
+  background-image: none;
+  background-color: var(--nb-c1);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: var(--nb-on-fill);
+  color: var(--nb-on-fill);
+  border: var(--nb-bw) solid var(--nb-ink);
+  border-radius: var(--nb-radius);
+  padding: 0 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --------------------------------------------------------------------------
+   9. Controls — fill, border, hard shadow, press into the shadow
+   -------------------------------------------------------------------------- */
+
+/* Primary buttons carry no border of their own in the default skin. */
+html[data-design='neobrutalism'] a[class~='bg-[color:var(--accent)]'],
+html[data-design='neobrutalism'] button[class~='bg-[color:var(--accent)]'] {
+  border: var(--nb-bw) solid var(--nb-ink);
+  color: var(--accent-foreground);
+  box-shadow: var(--nb-shadow);
+}
+
+html[data-design='neobrutalism'] a[class~='border'],
+html[data-design='neobrutalism'] button[class~='border'],
+html[data-design='neobrutalism'] a[class~='bg-[color:var(--accent)]'],
+html[data-design='neobrutalism'] button[class~='bg-[color:var(--accent)]'] {
+  transition: transform 90ms ease, box-shadow 90ms ease, background-color 140ms ease,
+    color 140ms ease;
+}
+
+html[data-design='neobrutalism'] a[class~='border']:hover,
+html[data-design='neobrutalism'] button[class~='border']:hover,
+html[data-design='neobrutalism'] a[class~='bg-[color:var(--accent)]']:hover,
+html[data-design='neobrutalism'] button[class~='bg-[color:var(--accent)]']:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--nb-ink);
+}
+
+/* Pressed: the control moves *into* its own shadow. */
+html[data-design='neobrutalism'] a[class~='border']:active,
+html[data-design='neobrutalism'] button[class~='border']:active,
+html[data-design='neobrutalism'] a[class~='bg-[color:var(--accent)]']:active,
+html[data-design='neobrutalism'] button[class~='bg-[color:var(--accent)]']:active {
+  transform: translate(var(--nb-press), var(--nb-press));
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   10. Inputs — flat fill, ink border, hard shadow
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] input,
+html[data-design='neobrutalism'] textarea,
+html[data-design='neobrutalism'] select {
+  border: var(--nb-bw) solid var(--nb-ink);
+  border-radius: var(--nb-radius);
+  background-color: var(--card);
+  color: var(--foreground);
+  box-shadow: var(--nb-shadow-sm);
+}
+
+/* --------------------------------------------------------------------------
+   11. Focus, selection, scrollbar
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] :focus-visible {
+  outline: 3px solid var(--nb-focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+html[data-design='neobrutalism'] ::selection {
+  background-color: var(--nb-c1);
+  color: var(--nb-on-fill);
+}
+
+html[data-design='neobrutalism'] ::-webkit-scrollbar-track {
+  background: var(--background);
+  border-left: var(--nb-bw) solid var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] ::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 0;
+  border-left: var(--nb-bw) solid var(--nb-ink);
+}
+
+/* --------------------------------------------------------------------------
+   12. Motion — minimal, fast, playful, and fully opt-out-able
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-design='neobrutalism'] a[class~='border'],
+  html[data-design='neobrutalism'] button[class~='border'],
+  html[data-design='neobrutalism'] a[class~='bg-[color:var(--accent)]'],
+  html[data-design='neobrutalism'] button[class~='bg-[color:var(--accent)]'] {
+    transition: background-color 140ms ease, color 140ms ease;
+  }
+
+  html[data-design='neobrutalism'] a[class~='border']:hover,
+  html[data-design='neobrutalism'] button[class~='border']:hover,
+  html[data-design='neobrutalism'] a[class~='bg-[color:var(--accent)]']:hover,
+  html[data-design='neobrutalism'] button[class~='bg-[color:var(--accent)]']:hover,
+  html[data-design='neobrutalism'] a[class~='border']:active,
+  html[data-design='neobrutalism'] button[class~='border']:active,
+  html[data-design='neobrutalism'] a[class~='bg-[color:var(--accent)]']:active,
+  html[data-design='neobrutalism'] button[class~='bg-[color:var(--accent)]']:active {
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. The design switcher itself, in this skin
+   (opted into explicitly — the picker uses private `dsw-` class names, so
+   none of the utility-class rules above can reach it by accident.)
+   -------------------------------------------------------------------------- */
+
+html[data-design='neobrutalism'] .dsw-overlay {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+html[data-design='neobrutalism'] .dsw-panel {
+  border: var(--nb-bw) solid var(--nb-ink);
+  border-radius: var(--nb-radius);
+  box-shadow: 10px 10px 0 var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] .dsw-title {
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+html[data-design='neobrutalism'] .dsw-option {
+  border: var(--nb-bw) solid var(--nb-ink);
+  border-radius: var(--nb-radius);
+  background-color: var(--card);
+  box-shadow: var(--nb-shadow);
+  transition: transform 90ms ease, box-shadow 90ms ease;
+}
+
+html[data-design='neobrutalism'] .dsw-option:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--nb-ink);
+}
+
+html[data-design='neobrutalism'] .dsw-option:active {
+  transform: translate(var(--nb-press), var(--nb-press));
+  box-shadow: none;
+}
+
+html[data-design='neobrutalism'] .dsw-option[data-active='true'] {
+  background-color: var(--muted);
+}
+
+/* Same rule as the filled cards: on a saturated fill, copy goes black. */
+html[data-design='neobrutalism'].light .dsw-option[data-active='true'] .dsw-option__cta {
+  color: var(--nb-on-fill);
+}
+
+html[data-design='neobrutalism'] .dsw-option__badge {
+  border: 2px solid var(--nb-ink);
+  border-radius: var(--nb-radius);
+}
+
+html[data-design='neobrutalism'] .dsw-close {
+  border: var(--nb-bw) solid var(--nb-ink);
+  border-radius: var(--nb-radius);
+  box-shadow: var(--nb-shadow-sm);
+}
+
+html[data-design='neobrutalism'] .dsw-option:focus-visible,
+html[data-design='neobrutalism'] .dsw-close:focus-visible {
+  outline: 3px solid var(--nb-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-design='neobrutalism'] .dsw-option {
+    transition: none;
+  }
+
+  html[data-design='neobrutalism'] .dsw-option:hover,
+  html[data-design='neobrutalism'] .dsw-option:active {
+    transform: none;
+  }
+}

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Github, Linkedin, Mail } from 'lucide-react'
 import { Logo } from '@/components/shared/Logo'
 import { MediumIcon } from '@/components/shared/MediumIcon'
+import { DesignSwitchButton } from '@/components/shared/DesignSwitchButton'
 import { t } from '@/lib/i18n'
 import type { Locale } from '@/constants/config'
 import type { CVData } from '@/types/cv'
@@ -68,6 +69,9 @@ export function Footer({ lang, cv }: FooterProps) {
             &copy; {year} {personalInfo.fullName}. {t(lang, 'footer.rights')}
           </p>
           <p className="mt-1">{t(lang, 'footer.builtWith')}</p>
+          <div className="mt-2 md:flex md:justify-end">
+            <DesignSwitchButton lang={lang} variant="link" />
+          </div>
         </div>
       </div>
     </footer>
