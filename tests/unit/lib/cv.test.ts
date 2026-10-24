@@ -22,7 +22,7 @@ describe('loadCV("en")', () => {
     const keys = Object.keys(cv.skills)
     expect(keys).toContain('Programming Languages')
     expect(keys).toContain('Test & QA')
-    expect(keys).toContain('Test Automation')
+    expect(keys).toContain('Test Automation & Tools')
   })
 
   it('normalizes the education entries with institution + years', () => {
@@ -66,7 +66,7 @@ describe('loadCV("tr")', () => {
     const cv = loadCV('tr')
     const keys = Object.keys(cv.skills)
     expect(keys).toContain('Programlama Dilleri')
-    expect(keys).toContain('Test ve Kalite Güvence')
+    expect(keys).toContain('Test & QA')
   })
 
   it('returns the same number of education entries as the English CV', () => {

@@ -4,54 +4,44 @@
     "title": "Computer Engineer",
     "phone": "+90 541 488 42 53",
     "email": "emrepaca3@gmail.com",
-    "languages": "English Intermediate (B1-B2)",
+    "languages": "English (B1-B2)",
     "date_of_birth": "May 11, 2001",
     "city": "Mersin",
     "linkedin": "/in/emre-paca",
     "github": "/emrepca",
     "medium": "/@emrepaca3"
   },
-  "professional_summary": "Computer Engineering graduate with a strong foundation in both software development and testing processes. Proficient in C# (.NET), Python, and web technologies, with hands-on experience in manual testing, test case design, and bug tracking. Familiar with SDLC and Agile methodologies, and focused on solving technical problems through analytical thinking. I am open to hybrid and on-site work models in Istanbul, Ankara, and Mersin, as well as remote opportunities.",
+  "professional_summary": "Computer Engineering graduate with a strong foundation in both software development and testing processes. Proficient in C# (.NET), Python, and web technologies, with hands-on experience in manual testing, test case design, and bug tracking. Currently working across ERP testing and IT infrastructure, combining software quality assurance with system administration and end-user support. Familiar with SDLC and Agile methodologies, and focused on solving technical problems through analytical thinking.",
   "education": [
     {
       "institution": "Bülent Ecevit University",
-      "degree": "Computer Engineering",
+      "degree": "B.Sc. in Computer Engineering",
       "years": "2020-2024",
-      "gpa": "3.43"
-    },
-    {
-      "institution": "Tarsus Borsa Istanbul Şehit Umut Sami Şensoy Anatolian High School",
-      "track": "Science Track",
-      "years": "2015-2019",
-      "grade": "74.78"
+      "gpa": "3.43 / 4.00"
     }
   ],
   "skills": {
-    "programming_languages": ["C# (.NET)", "Python", "JavaScript"],
-    "web_technologies": ["HTML5", "CSS3"],
-    "test_and_qa": ["Manual Testing", "Test Case Design", "Bug Tracking", "Regression Testing"],
-    "test_automation": ["Selenium (Python, C#)"],
-    "api_testing": ["Postman", "REST API Testing"],
-    "databases": ["SQL"],
-    "cloud_and_version_control": ["Google Cloud Run", "Git", "GitHub"],
-    "operating_systems": ["Linux (Ubuntu, Kali Linux)"],
-    "test_management_tools": ["Jira", "TestRail", "Confluence"]
+    "programming_languages": ["C# (.NET)", "Python", "JavaScript", "TypeScript"],
+    "web_technologies": ["HTML5", "CSS3", "React", "Next.js", "Tailwind CSS"],
+    "databases": ["SQL", "MySQL", "MSSQL", "Relational Database Fundamentals"],
+    "cloud_devops_deployment": ["AWS (Amplify, CloudFront)", "Google Cloud Run", "Cloudflare", "GitHub Actions", "CI/CD Pipelines", "Git", "GitHub"],
+    "test_and_qa": ["Manual Testing", "Functional Testing", "Regression Testing", "User Acceptance Testing (UAT)", "Test Case Design", "Bug Tracking", "Agile / Scrum"],
+    "test_automation_and_tools": ["Selenium (Python, C#)", "Playwright", "Vitest", "Postman", "REST API Testing", "Jira", "TestRail", "Confluence"],
+    "systems_and_it": ["Linux (Ubuntu, Kali Linux)", "Windows", "Microsoft 365", "Firewall & Backup Administration", "Networking"]
   },
   "work_experience": [
     {
-      "company": "Mevsim Construction",
-      "role": "System Administrator / IT Specialist",
-      "date": "June 2026 - Present",
+      "company": "Mevsim İnşaat",
+      "role": "Software Test & IT Specialist",
+      "date": "Jun 2026 - Present",
       "responsibilities": [
-        "Managing the company's IT infrastructure, system continuity, and end-user support processes.",
-        "Coordinating backup operations while monitoring data security and disaster recovery procedures.",
-        "Providing ERP system administration, including user management, access permissions, and operational support.",
-        "Participating in the ERP migration process by designing test scenarios and conducting functional and user acceptance testing (UAT).",
-        "Delivering technical support to employees regarding hardware, software, network, and enterprise systems.",
-        "Analyzing system issues, troubleshooting technical problems, and contributing to process improvements.",
-        "Supporting the optimization of internal IT operations to improve efficiency and system reliability."
+        "Perform manual, functional, regression, and user acceptance testing (UAT) for the company's new ERP system.",
+        "Identify and report software defects, run verification cycles with the development team, and validate the accuracy of business processes.",
+        "Manage firewall administration, corporate backups, and core system administration tasks to ensure IT infrastructure continuity.",
+        "Provide technical support to end users on hardware, software, networking, and Microsoft 365.",
+        "Maintain, update, and technically improve corporate websites."
       ],
-      "technologies": ["ERP Management", "System Administration", "Technical Support", "Backup & Data Security", "User Management", "Manual Testing", "User Acceptance Testing (UAT)", "Windows Systems", "Networking Fundamentals"]
+      "technologies": ["Manual Testing", "Functional Testing", "Regression Testing", "UAT", "ERP", "Firewall", "Backup", "System Administration", "Microsoft 365", "Technical Support"]
     },
     {
       "company": "Gini Talent",
@@ -62,7 +52,6 @@
         "Analyzed query-result relevance and conducted accuracy and consistency testing.",
         "Designed and executed test scenarios based on predefined evaluation criteria.",
         "Identified spam, misleading, and policy-violating content through quality checks.",
-        "Evaluated the impact of algorithmic ranking on user experience and provided improvement suggestions.",
         "Reported findings based on quality metrics and delivered structured feedback."
       ],
       "technologies": ["Manual Testing", "Search Quality", "Test Scenarios", "QA Metrics"]
@@ -73,13 +62,11 @@
       "date": "Aug 2024 - Sep 2024",
       "responsibilities": [
         "Contributed to the development of a Unity and C#-based application.",
-        "Supported backend development using Python.",
-        "Participated in API integration processes.",
+        "Supported backend development using Python and participated in API integration processes.",
         "Assisted in functional testing and validation activities during development.",
-        "Contributed to the integration of the LLaVA AI model and supported post-integration validation.",
-        "Performed basic server management and verification tasks using Remote-SSH."
+        "Contributed to the integration of the LLaVA AI model and supported post-integration validation."
       ],
-      "technologies": ["Unity", "C#", "Python", "REST APIs", "LLaVA", "Remote-SSH"]
+      "technologies": ["Unity", "C#", "Python", "REST APIs", "LLaVA"]
     },
     {
       "company": "Mono Bilişim",
@@ -89,40 +76,33 @@
         "Managed Ubuntu-based VM instances on Google Cloud Platform.",
         "Deployed web applications via SSH on remote servers.",
         "Configured Caddy Web Server and managed SSL certificate validation.",
-        "Gained hands-on experience in DNS, IP addressing, and networking fundamentals.",
-        "Contributed to deployment and performed post-deployment validation checks."
+        "Gained hands-on experience in DNS, IP addressing, and networking fundamentals."
       ],
       "technologies": ["Google Cloud", "Ubuntu", "Caddy", "SSH", "SSL/DNS"]
     }
   ],
   "projects": [
     {
+      "title": "Personal Portfolio Website",
+      "description": "Developed a personal portfolio website using Next.js 15 (App Router), React 19, TypeScript, and Tailwind CSS, deployed on AWS and Cloudflare infrastructure.",
+      "technologies": ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion", "AWS", "Cloudflare", "GitHub Actions", "Vitest", "Playwright"],
+      "details": "The site features a \"Developer Activity\" dashboard that pulls live data from the GitHub API to display the contribution graph, streak calculations, language breakdown, and recent activity, with server-side caching to stay within API rate limits. Implemented full internationalization through Next.js middleware with /en and /tr routes, accessible Framer Motion animations with prefers-reduced-motion support, and a system-preference-based dark/light theme. Built a GitHub Actions CI/CD pipeline that runs lint, type-check, test, and build stages on every push, backed by a four-layer automated test suite (unit, component, integration, and Playwright E2E) with enforced coverage thresholds."
+    },
+    {
       "title": "Gesture and Voice Controlled Twitter (X) Automation",
       "description": "Developed a real-time system to control Twitter (X) interactions using hand gestures and voice commands.",
-      "technologies": ["Python", "Selenium", "OpenCV", "Mediapipe", "SpeechRecognition", "Threading"],
-      "details": "Implemented Selenium-based UI interaction and automation workflows. Conducted testing and prepared structured reports for system outputs."
-    },
-    {
-      "title": "Linux-Based IP Management CLI Tool",
-      "description": "Developed a Python-based CLI tool to manage network interface IP configurations.",
-      "technologies": ["Python", "subprocess", "argparse", "re"],
-      "details": "Automated command-line operations and integrated system-level commands for network configuration management."
-    },
-    {
-      "title": "ARP Network Scanner",
-      "description": "Built an ARP-based network scanning tool using Python and Scapy.",
-      "technologies": ["Python", "Scapy"],
-      "details": "Detected devices' IP, MAC addresses, and vendor information. Generated structured outputs for analysis and reporting."
+      "technologies": ["Python", "Selenium", "OpenCV", "MediaPipe", "SpeechRecognition", "Threading"],
+      "details": "Implemented Selenium-based UI interaction and automation workflows, and conducted testing with structured reporting for system outputs."
     }
   ],
   "certifications": [
     "ISTQB Certified Tester Foundation Level (CTFL) - ISTQB",
     "Software Testing - EPAM Systems",
-    "Software Testing Training - Udemy",
-    "Agile Project Management - BTK Academy",
-    "C# Programming - Udemy",
     ".NET Design Patterns & ASP.NET Core & Unit Testing in .NET - EPAM Systems",
     ".NET C# Advanced & Data Processing - EPAM Systems",
-    "Git, GitHub - BTK Academy"
+    "Software Testing Training - Udemy",
+    "C# Programming - Udemy",
+    "Agile Project Management - BTK Academy",
+    "Git & GitHub - BTK Academy"
   ]
 }
