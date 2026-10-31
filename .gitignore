@@ -40,4 +40,4 @@ next-env.d.ts
 /.claude
 
 # personal portrait photos (kept local, not published to GitHub)
-/public/hero/portfolio_portre*.png
+/public/hero/portfolio_portre.png
