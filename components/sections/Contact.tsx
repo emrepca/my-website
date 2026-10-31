@@ -98,7 +98,11 @@ export function Contact({ lang, cv }: ContactProps) {
                     <item.icon className="h-4 w-4 text-[color:var(--accent)]" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-[11px] font-medium uppercase tracking-wider text-[color:var(--muted-foreground)]">
+                    {/* Brand names keep their Latin capitals even under Turkish casing rules */}
+                    <p
+                      lang={item.href?.startsWith('http') ? 'en' : undefined}
+                      className="text-[11px] font-medium uppercase tracking-wider text-[color:var(--muted-foreground)]"
+                    >
                       {item.label}
                     </p>
                     <p className="truncate text-sm font-medium text-foreground">{item.value}</p>

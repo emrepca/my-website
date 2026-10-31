@@ -3,31 +3,48 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: #0a0a0f;
-    --foreground: #f1f5f9;
-    --card: #111118;
-    --card-foreground: #f1f5f9;
-    --border: rgba(255, 255, 255, 0.07);
-    --accent: #6366f1;
-    --accent-hover: #4f46e5;
+  /* Warm palette lifted from the hero: cream panels floating on a burnt-orange field. */
+  :root,
+  .light {
+    --page: #9a3d0c;
+    --background: #fbfaf8;
+    --foreground: #1c120c;
+    --card: #fbfaf8;
+    --card-foreground: #1c120c;
+    --border: rgba(90, 40, 10, 0.12);
+    --accent: #c2510f;
+    --accent-hover: #a3420a;
     --accent-foreground: #ffffff;
-    --muted: #1e1e2a;
-    --muted-foreground: #94a3b8;
+    --muted: #f1e8e0;
+    --muted-foreground: #75645a;
     --radius: 0.75rem;
   }
 
-  .light {
-    --background: #f8fafc;
-    --foreground: #0f0f23;
-    --card: #ffffff;
-    --card-foreground: #0f0f23;
-    --border: rgba(0, 0, 0, 0.08);
-    --accent: #6366f1;
-    --accent-hover: #4f46e5;
-    --accent-foreground: #ffffff;
-    --muted: #e2e8f0;
-    --muted-foreground: #64748b;
+  .dark {
+    --background: #1a110c;
+    --foreground: #f7efe8;
+    --card: #1f1510;
+    --card-foreground: #f7efe8;
+    --border: rgba(255, 220, 190, 0.1);
+    --accent: #f08a3c;
+    --accent-hover: #e0732a;
+    --accent-foreground: #1a0f08;
+    --muted: #2c1f17;
+    --muted-foreground: #b9a598;
+  }
+
+  /* Re-scopes the tokens for content sitting directly on the orange field (section headers, footer). */
+  .on-orange {
+    --background: #b04a10;
+    --foreground: #ffffff;
+    --card: rgba(255, 255, 255, 0.12);
+    --border: rgba(255, 255, 255, 0.28);
+    --accent: #ffe0c2;
+    --accent-hover: #ffffff;
+    --accent-foreground: #7a2e0a;
+    --muted: rgba(255, 255, 255, 0.16);
+    --muted-foreground: rgba(255, 244, 235, 0.82);
+    color: var(--foreground);
   }
 
   * {
@@ -39,7 +56,7 @@
   }
 
   body {
-    background-color: var(--background);
+    background-color: var(--page);
     color: var(--foreground);
     font-feature-settings: 'rlig' 1, 'calt' 1;
     transition: background-color 300ms ease, color 300ms ease;
@@ -58,7 +75,7 @@
     height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--background);
+    background: var(--page);
   }
   ::-webkit-scrollbar-thumb {
     background: var(--muted);
@@ -85,7 +102,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, var(--accent), #a855f7);
+    background: linear-gradient(135deg, var(--accent), #f5a050);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

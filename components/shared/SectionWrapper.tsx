@@ -31,15 +31,16 @@ export function SectionWrapper({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5 }}
-            className="mb-12 md:mb-16"
+            className="on-orange mb-12 md:mb-16"
           >
             {subtitle && (
-              <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-[color:var(--accent)]">
+              <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--muted-foreground)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-white" />
                 {subtitle}
               </p>
             )}
             {title && (
-              <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+              <h2 className="font-display text-5xl uppercase leading-[1.15] text-foreground md:text-7xl md:leading-[1.22]">
                 {title}
               </h2>
             )}

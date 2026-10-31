@@ -68,7 +68,7 @@ export function About({ lang, cv }: AboutProps) {
               className="rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)] p-5"
             >
               <s.icon className="h-5 w-5 text-[color:var(--accent)]" />
-              <p className="mt-3 text-2xl font-bold text-foreground">{s.value}</p>
+              <p className="mt-3 font-display text-3xl uppercase text-foreground">{s.value}</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-[color:var(--muted-foreground)]">
                 {s.label}
               </p>

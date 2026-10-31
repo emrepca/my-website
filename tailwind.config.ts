@@ -28,6 +28,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'Impact', 'sans-serif'],
+        brand: ['var(--font-brand)', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

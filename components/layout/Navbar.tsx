@@ -19,14 +19,15 @@ interface NavbarProps {
 export function Navbar({ lang }: NavbarProps) {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [pastHero, setPastHero] = useState(false)
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => setMounted(true), [])
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
+    // The hero carries its own navigation, so this bar only slides in once the hero is left behind.
+    const onScroll = () => setPastHero(window.scrollY > window.innerHeight - 96)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -44,13 +45,13 @@ export function Navbar({ lang }: NavbarProps) {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-        scrolled ? 'glass' : 'bg-transparent'
+        pastHero ? 'glass translate-y-0 opacity-100' : 'pointer-events-none -translate-y-full opacity-0'
       )}
+      inert={!pastHero}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-8">
         <Link href={`/${lang}`} className="flex items-center gap-2 text-foreground" aria-label="Home">
-          <Logo size={28} />
-          <span className="hidden text-sm font-semibold tracking-tight sm:inline">Emre Paça</span>
+          <Logo size={26} withMark />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">

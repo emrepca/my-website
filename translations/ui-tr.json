@@ -13,7 +13,14 @@
     "greeting": "Merhaba, ben",
     "viewProjects": "Projeleri Gör",
     "contactMe": "İletişime Geç",
-    "availability": "Yeni fırsatlara açık"
+    "availability": "Yeni fırsatlara açık",
+    "headline": "BUILD",
+    "taglineLine1": "Çalışan kod.",
+    "taglineLine2": "Kalıcı kalite.",
+    "viewWork": "Projelerim",
+    "availableLabel": "Şu an",
+    "availableTitle": "Yeni Fırsatlara Açığım",
+    "portraitAlt": "Emre Paça portresi"
   },
   "sections": {
     "about": {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Anton, Inter, Outfit } from 'next/font/google'
 import { ThemeProvider } from '@/components/shared/ThemeProvider'
 import { SITE_CONFIG } from '@/constants/config'
 import './globals.css'
@@ -7,6 +7,20 @@ import './globals.css'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap',
+})
+
+const anton = Anton({
+  subsets: ['latin', 'latin-ext'],
+  weight: '400',
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const outfit = Outfit({
+  subsets: ['latin', 'latin-ext'],
+  weight: '600',
+  variable: '--font-brand',
   display: 'swap',
 })
 
@@ -26,11 +40,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={inter.variable}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${anton.variable} ${outfit.variable}`}>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange={false}
         >

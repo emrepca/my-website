@@ -13,7 +13,14 @@
     "greeting": "Hello, I'm",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
-    "availability": "Open to opportunities"
+    "availability": "Open to opportunities",
+    "headline": "BUILD",
+    "taglineLine1": "Code that works.",
+    "taglineLine2": "Quality that lasts.",
+    "viewWork": "View Work",
+    "availableLabel": "Available for",
+    "availableTitle": "New Opportunities",
+    "portraitAlt": "Portrait of Emre Paça"
   },
   "sections": {
     "about": {

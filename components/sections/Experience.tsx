@@ -63,12 +63,12 @@ export function Experience({ lang, cv }: ExperienceProps) {
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
         <div className="absolute left-[10%] top-1/3 h-[420px] w-[420px] rounded-full bg-[color:var(--accent)] opacity-[0.06] blur-[140px]" />
-        <div className="absolute right-[5%] bottom-1/4 h-[360px] w-[360px] rounded-full bg-purple-500 opacity-[0.05] blur-[140px]" />
+        <div className="absolute right-[5%] bottom-1/4 h-[360px] w-[360px] rounded-full bg-[#ffb347] opacity-[0.12] blur-[140px]" />
       </div>
 
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[5fr_7fr] lg:gap-20">
-          <aside className="lg:sticky lg:top-28 lg:self-start">
+          <aside className="on-orange lg:sticky lg:top-28 lg:self-start">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ export function Experience({ lang, cv }: ExperienceProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
-              className="mt-5 text-3xl font-bold leading-[1.08] tracking-tight text-foreground md:text-5xl"
+              className="mt-5 font-display text-5xl uppercase leading-[1.15] text-foreground md:text-7xl md:leading-[1.22]"
             >
               {t(lang, 'sections.experience.title')}
             </motion.h2>
@@ -254,13 +254,13 @@ function ExperienceCard({
       >
         <div
           aria-hidden="true"
-          className={`pointer-events-none absolute -inset-0.5 -z-10 rounded-[28px] bg-gradient-to-br from-[color:var(--accent)]/60 via-purple-500/40 to-fuchsia-500/30 opacity-0 blur-2xl transition-opacity duration-700 ${
+          className={`pointer-events-none absolute -inset-0.5 -z-10 rounded-[28px] bg-gradient-to-br from-[color:var(--accent)]/60 via-amber-400/40 to-orange-300/30 opacity-0 blur-2xl transition-opacity duration-700 ${
             isActive ? 'opacity-60' : 'opacity-0'
           }`}
         />
 
         <div
-          className={`relative overflow-hidden rounded-3xl border bg-[color:var(--card)]/55 p-6 backdrop-blur-2xl transition-[border-color,box-shadow] duration-500 md:p-9 ${
+          className={`relative overflow-hidden rounded-3xl border bg-[color:var(--card)] p-6 transition-[border-color,box-shadow] duration-500 md:p-9 ${
             isActive
               ? 'border-[color:var(--accent)]/45 shadow-[0_40px_120px_-40px_color-mix(in_srgb,var(--accent)_70%,transparent)]'
               : 'border-[color:var(--border)] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.55)]'
@@ -276,7 +276,7 @@ function ExperienceCard({
           />
           <div
             aria-hidden="true"
-            className={`pointer-events-none absolute -top-24 -right-20 h-56 w-56 rounded-full bg-gradient-to-br from-[color:var(--accent)] to-fuchsia-500 blur-3xl transition-opacity duration-700 ${
+            className={`pointer-events-none absolute -top-24 -right-20 h-56 w-56 rounded-full bg-gradient-to-br from-[color:var(--accent)] to-amber-300 blur-3xl transition-opacity duration-700 ${
               isActive ? 'opacity-25' : 'opacity-0'
             }`}
           />
@@ -299,7 +299,7 @@ function ExperienceCard({
             <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--card)]">
               <div
                 aria-hidden="true"
-                className={`absolute inset-0 rounded-2xl bg-gradient-to-br from-[color:var(--accent)] to-purple-500 opacity-0 blur-md transition-opacity ${
+                className={`absolute inset-0 rounded-2xl bg-gradient-to-br from-[color:var(--accent)] to-amber-400 opacity-0 blur-md transition-opacity ${
                   isActive ? 'opacity-50' : ''
                 }`}
               />
@@ -349,7 +349,7 @@ function ExperienceCard({
                 >
                   <span
                     aria-hidden="true"
-                    className="mt-2 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gradient-to-br from-[color:var(--accent)] to-purple-400 shadow-[0_0_8px_color-mix(in_srgb,var(--accent)_60%,transparent)]"
+                    className="mt-2 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gradient-to-br from-[color:var(--accent)] to-amber-300 shadow-[0_0_8px_color-mix(in_srgb,var(--accent)_60%,transparent)]"
                   />
                   <span>{r}</span>
                 </li>

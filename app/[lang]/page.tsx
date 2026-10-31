@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import projectsJson from '@/content/projects/projects.json'
 import { LOCALES, type Locale } from '@/constants/config'
@@ -30,7 +31,18 @@ export default async function LocalizedPage({ params }: PageProps) {
   const certificates = listCertificates()
 
   return (
-    <>
+    <div lang={lang}>
+      {/* Same orange field as the hero, pinned behind every section */}
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-20">
+        <Image
+          src="/hero/hero_orange_background.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#5a1f04]/50 via-transparent to-transparent" />
+      </div>
       <Navbar lang={lang} />
       <main>
         <Hero lang={lang} cv={cv} />
@@ -44,6 +56,6 @@ export default async function LocalizedPage({ params }: PageProps) {
         <Contact lang={lang} cv={cv} />
       </main>
       <Footer lang={lang} cv={cv} />
-    </>
+    </div>
   )
 }

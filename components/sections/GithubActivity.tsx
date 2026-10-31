@@ -48,7 +48,7 @@ export function GithubActivity({ lang }: GithubActivityProps) {
     <section id="github" className="section-padding relative scroll-mt-20">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute right-[6%] top-1/4 h-[420px] w-[420px] rounded-full bg-[color:var(--accent)] opacity-[0.05] blur-[150px]" />
-        <div className="absolute left-[4%] bottom-1/4 h-[320px] w-[320px] rounded-full bg-purple-500 opacity-[0.04] blur-[150px]" />
+        <div className="absolute left-[4%] bottom-1/4 h-[320px] w-[320px] rounded-full bg-[#ffb347] opacity-[0.12] blur-[150px]" />
       </div>
 
       <div className="mx-auto w-full max-w-6xl px-6 md:px-8">
@@ -76,7 +76,7 @@ function Header({
   const data = state.status === 'ready' ? state.data : null
 
   return (
-    <div className="mb-12 md:mb-16">
+    <div className="on-orange mb-12 md:mb-16">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ function Header({
           {t(lang, 'sections.github.subtitle')}
         </span>
         {state.status === 'ready' && (
-          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-500">
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
@@ -104,7 +104,7 @@ function Header({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
-        className="mt-5 text-3xl font-bold leading-[1.08] tracking-tight text-foreground md:text-5xl"
+        className="mt-5 font-display text-5xl uppercase leading-[1.15] text-foreground md:text-7xl md:leading-[1.22]"
       >
         {t(lang, 'sections.github.title')}
       </motion.h2>
