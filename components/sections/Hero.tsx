@@ -75,7 +75,7 @@ export function Hero({ lang, cv }: HeroProps) {
         />
 
         {/* Portrait — overlaps the seam between the orange field and the white panel */}
-        <div className="pointer-events-none absolute bottom-0 right-[-18%] z-10 aspect-[1232/1277] h-[62%] sm:right-[-6%] sm:h-[72%] lg:left-[51%] lg:right-auto lg:h-[90%] lg:-translate-x-[52%]">
+        <div className="pointer-events-none absolute bottom-0 right-[-4%] z-[25] aspect-[1232/1277] h-[62%] sm:right-[-2%] lg:z-10 sm:h-[72%] lg:left-[51%] lg:right-auto lg:h-[90%] lg:-translate-x-[52%]">
         <motion.div
           initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
